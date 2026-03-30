@@ -1,0 +1,31 @@
+running egg_info
+writing ../../build/agribotv3/agribotv3.egg-info/PKG-INFO
+writing dependency_links to ../../build/agribotv3/agribotv3.egg-info/dependency_links.txt
+writing entry points to ../../build/agribotv3/agribotv3.egg-info/entry_points.txt
+writing requirements to ../../build/agribotv3/agribotv3.egg-info/requires.txt
+writing top-level names to ../../build/agribotv3/agribotv3.egg-info/top_level.txt
+reading manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+writing manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+running build
+running build_py
+copying agribotv3/ground_truth_odom.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+running install
+running install_lib
+copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/ground_truth_odom.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/ground_truth_odom.py to ground_truth_odom.cpython-312.pyc
+running install_data
+copying launch/sim.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+copying config/ekf.yaml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+copying urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+running install_egg_info
+removing '/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/agribotv3/agribotv3.egg-info to /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info
+running install_scripts
+Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing ground_truth_odom script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+writing list of installed files to '/home/som3a-station/prjs/agribot/build/agribotv3/install.log'

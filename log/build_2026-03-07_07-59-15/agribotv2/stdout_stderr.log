@@ -1,0 +1,133 @@
+running develop
+Removing /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2.egg-link (link to .)
+running egg_info
+writing ../../build/agribotv2/agribotv2.egg-info/PKG-INFO
+writing dependency_links to ../../build/agribotv2/agribotv2.egg-info/dependency_links.txt
+writing entry points to ../../build/agribotv2/agribotv2.egg-info/entry_points.txt
+writing requirements to ../../build/agribotv2/agribotv2.egg-info/requires.txt
+writing top-level names to ../../build/agribotv2/agribotv2.egg-info/top_level.txt
+reading manifest file '../../build/agribotv2/agribotv2.egg-info/SOURCES.txt'
+writing manifest file '../../build/agribotv2/agribotv2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/som3a-station/prjs/agribot/build/agribotv2/build
+creating /home/som3a-station/prjs/agribot/build/agribotv2/build/lib
+creating /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/__init__.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/vision_node.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/odom_patch.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/ground_truth_odom.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/ultrasonic_converter.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/teleop.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/obstacle_avoidance.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/csv_to_costmap.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+copying agribotv2/odom_to_tf.py -> /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2
+running install
+running install_lib
+creating /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/__init__.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/vision_node.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/odom_patch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/ground_truth_odom.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/ultrasonic_converter.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/teleop.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/obstacle_avoidance.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/csv_to_costmap.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+copying /home/som3a-station/prjs/agribot/build/agribotv2/build/lib/agribotv2/odom_to_tf.py -> /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/vision_node.py to vision_node.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/odom_patch.py to odom_patch.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/ground_truth_odom.py to ground_truth_odom.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/ultrasonic_converter.py to ultrasonic_converter.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/teleop.py to teleop.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/obstacle_avoidance.py to obstacle_avoidance.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/csv_to_costmap.py to csv_to_costmap.cpython-312.pyc
+byte-compiling /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2/odom_to_tf.py to odom_to_tf.cpython-312.pyc
+running install_data
+copying resource/agribotv2 -> /home/som3a-station/prjs/agribot/install/agribotv2/share/ament_index/resource_index/packages
+copying package.xml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2
+copying agribotv2/__init__.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/vision_node.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/odom_patch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/ground_truth_odom.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/ultrasonic_converter.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/teleop.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/obstacle_avoidance.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/csv_to_costmap.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying agribotv2/odom_to_tf.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/agribotv2
+copying launch/agribot_full.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying launch/nav2.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying launch/display_headless.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying launch/display_orchard.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying launch/display.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying launch/display_agribot_world.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/launch
+copying urdf/AgribotURDF7_withsensors.urdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf
+copying urdf/THEBOT/base.xacro -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf/THEBOT
+copying urdf/THEBOT/robot.xacro -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf/THEBOT
+copying urdf/THEBOT/sensors.xacro -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf/THEBOT
+copying urdf/THEBOT/wheels.xacro -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf/THEBOT
+copying urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/urdf/THEBOT
+copying meshes/Camera.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/base_link.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/Wheel2.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/US4.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/Wheel3.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/US1.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/US2.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/Seeder.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/Wheel1.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/Wheel4.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying meshes/US3.STL -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/meshes
+copying config/nav2_params.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/joint_names_AgribotURDF7_withsensors.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/ekf.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/ekf_global.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/bridge_config.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/navsat_transform.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/ekf_local.yaml -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/basic_rvizconfig.rviz -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying config/urdf_config.rviz -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/config
+copying worlds/orchard.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/farmWith1CropRow.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/real.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/farm_textured.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/real_copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/emptysurroundedWithBoxes.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying worlds/real copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/worlds
+copying GUI/map_widget.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/config.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/database.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/vision.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/dashboard.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/controller.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/main.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/gui.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/fast_planner.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/astar.py -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/sandbackground.jpg -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/farm_data.db -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/README.md -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI
+copying GUI/agribot_data/grid_cells.csv -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI/agribot_data
+copying GUI/agribot_data/soil_scans.csv -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI/agribot_data
+copying GUI/agribot_data/seeds.csv -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/GUI/agribot_data
+copying models/big_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/big_plant
+copying models/big_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/big_plant
+copying models/big_plant/mesh/big_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/big_plant/mesh
+copying models/small_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/small_plant
+copying models/small_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/small_plant
+copying models/small_plant/mesh/small_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/small_plant/mesh
+copying models/sand_ground/model.config -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/sand_ground
+copying models/sand_ground/textures/sand.jpeg -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/sand_ground/textures
+copying models/sand_ground/scripts/sand.material -> /home/som3a-station/prjs/agribot/install/agribotv2/share/agribotv2/models/sand_ground/scripts
+running install_egg_info
+Copying ../../build/agribotv2/agribotv2.egg-info to /home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages/agribotv2-0.2.0-py3.12.egg-info
+running install_scripts
+Installing csv_to_costmap script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing ground_truth_odom script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing obstacle_avoidance script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing odom_patch script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing odom_to_tf script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv2/lib/agribotv2
+writing list of installed files to '/home/som3a-station/prjs/agribot/build/agribotv2/install.log'

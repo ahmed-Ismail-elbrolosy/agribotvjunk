@@ -1,0 +1,32 @@
+ekf_filter_node_local:
+  ros__parameters:
+    frequency: 30.0
+    two_d_mode: true
+    publish_tf: true
+    
+    map_frame: map              # Not used by local, but required param
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom           # Local EKF provides Odom frame
+
+    # Odom0: The Wheel Encoders (from Gazebo Bridge)
+    odom0: /odometry/fixed
+    # Config: X, Y, Z, Roll, Pitch, Yaw, dX, dY, dZ, dRoll, dPitch, dYaw, ddX, ddY, ddZ
+    # We take only Velocity (dX, dYaw) from wheels
+    odom0_config: [false, false, false,
+                   false, false, false,
+                   true,  false, false,
+                   false, false, true,
+                   false, false, false]
+    odom0_differential: false
+
+    # Imu0: The IMU
+    imu0: /imu
+    # Config: Orientation (Roll, Pitch, Yaw) and Angular Velocity
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true

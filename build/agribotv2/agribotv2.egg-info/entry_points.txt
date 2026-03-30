@@ -1,0 +1,9 @@
+[console_scripts]
+csv_to_costmap = agribotv2.csv_to_costmap:main
+ground_truth_odom = agribotv2.ground_truth_odom:main
+obstacle_avoidance = agribotv2.obstacle_avoidance:main
+odom_patch = agribotv2.odom_patch:main
+odom_to_tf = agribotv2.odom_to_tf:main
+teleop = agribotv2.teleop:main
+ultrasonic_converter = agribotv2.ultrasonic_converter:main
+vision_node = agribotv2.vision_node:main

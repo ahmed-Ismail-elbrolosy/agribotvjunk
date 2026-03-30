@@ -1,0 +1,22 @@
+[1.338s] Invoking command in '/home/som3a-station/prjs/agribot/build/agribotv3': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.agribot_venv_vision) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build --no-deps symlink_data
+[1.824s] running develop
+[2.155s] running egg_info
+[2.185s] writing agribotv3.egg-info/PKG-INFO
+[2.185s] writing dependency_links to agribotv3.egg-info/dependency_links.txt
+[2.186s] writing entry points to agribotv3.egg-info/entry_points.txt
+[2.186s] writing requirements to agribotv3.egg-info/requires.txt
+[2.186s] writing top-level names to agribotv3.egg-info/top_level.txt
+[2.250s] reading manifest file 'agribotv3.egg-info/SOURCES.txt'
+[2.251s] writing manifest file 'agribotv3.egg-info/SOURCES.txt'
+[2.338s] running build_ext
+[2.338s] Creating /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3.egg-link (link to .)
+[2.339s] Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.340s] Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.340s] Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.340s] Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.341s] Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.341s] Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.341s] 
+[2.342s] Installed /home/som3a-station/prjs/agribot/build/agribotv3
+[2.342s] running symlink_data
+[2.401s] Invoked command in '/home/som3a-station/prjs/agribot/build/agribotv3' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.agribot_venv_vision) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build --no-deps symlink_data

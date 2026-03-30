@@ -1,0 +1,9 @@
+seed_id,name,type,spacing_m,depth_m,season,germination_days
+1,Wheat,grain,0.15,0.05,winter,7
+2,Corn,grain,0.30,0.05,summer,10
+3,Tomato,vegetable,0.60,0.02,spring,8
+4,Lettuce,vegetable,0.30,0.01,spring,5
+5,Sunflower,oilseed,0.45,0.03,summer,12
+6,Potato,tuber,0.30,0.10,spring,14
+7,Carrot,root,0.05,0.01,spring,10
+8,Bean,legume,0.10,0.05,spring,7

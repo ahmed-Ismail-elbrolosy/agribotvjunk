@@ -1,0 +1,8 @@
+[console_scripts]
+csv_costmap_node = agribotv3.csv_costmap_node:main
+ground_truth_odom = agribotv3.ground_truth_odom:main
+gui = agribotv3.gui.app:main
+static_map_tf = agribotv3.static_map_tf:main
+teleop = agribotv3.teleop:main
+ultrasonic_converter = agribotv3.ultrasonic_converter:main
+vision_node = agribotv3.vision_node:main

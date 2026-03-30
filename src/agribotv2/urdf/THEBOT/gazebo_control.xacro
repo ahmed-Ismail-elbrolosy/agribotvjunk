@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="gazebo_control_macro">
+    <gazebo>
+
+        <!-- 1. IMU SYSTEM PLUGIN (Calculates Gravity/Acceleration) -->
+      <plugin filename="libignition-gazebo-imu-system.so"
+              name="ignition::gazebo::systems::Imu">
+      </plugin>
+
+      <!-- 2. NAVSAT SYSTEM PLUGIN (Calculates GPS Lat/Long) -->
+      <plugin filename="libignition-gazebo-navsat-system.so"
+              name="ignition::gazebo::systems::NavSat">
+      </plugin>
+
+      <!-- 3. SENSORS SYSTEM PLUGIN (Publishes the data) -->
+      <!-- You likely already have this, but ensure it is there -->
+      <plugin filename="libignition-gazebo-sensors-system.so"
+              name="ignition::gazebo::systems::Sensors">
+        <render_engine>ogre</render_engine>
+      </plugin>
+
+      <!-- FRONT WHEELS (Master) -->
+      <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
+        <left_joint>Wheel4J</left_joint>
+        <right_joint>Wheel1J</right_joint>
+        <wheel_separation>0.866</wheel_separation>
+        <wheel_radius>0.1</wheel_radius>
+        <odom_publish_frequency>30</odom_publish_frequency>
+        <topic>/cmd_vel</topic>
+        <odom_topic>/odometry</odom_topic>
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_link</child_frame_id>
+        <max_linear_acceleration>20.0</max_linear_acceleration>
+        <min_linear_acceleration>-20.0</min_linear_acceleration>
+        <max_angular_acceleration>20.0</max_angular_acceleration>
+        <min_angular_acceleration>-20.0</min_angular_acceleration>
+        <max_linear_velocity>4.0</max_linear_velocity>
+        <min_linear_velocity>-4.0</min_linear_velocity>
+        <max_angular_velocity>4.0</max_angular_velocity>
+        <min_angular_velocity>-4.0</min_angular_velocity>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>false</publish_odom_tf>
+        <publish_wheel_tf>false</publish_wheel_tf>
+      </plugin>
+
+      <!-- REAR WHEELS (Slave) -->
+       <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
+        <left_joint>Wheel3J</left_joint>
+        <right_joint>Wheel2J</right_joint>
+        <wheel_separation>0.866</wheel_separation>
+        <wheel_radius>0.1</wheel_radius>
+        <odom_publish_frequency>30</odom_publish_frequency>
+        <topic>/cmd_vel</topic>
+        <odom_topic>/odometry_rear_ignore</odom_topic>
+        <max_linear_acceleration>20.0</max_linear_acceleration>
+        <min_linear_acceleration>-20.0</min_linear_acceleration>
+        <max_angular_acceleration>20.0</max_angular_acceleration>
+        <min_angular_acceleration>-20.0</min_angular_acceleration>
+        <max_linear_velocity>4.0</max_linear_velocity>
+        <min_linear_velocity>-4.0</min_linear_velocity>
+        <max_angular_velocity>4.0</max_angular_velocity>
+        <min_angular_velocity>-4.0</min_angular_velocity>
+        <publish_odom>false</publish_odom>
+        <publish_odom_tf>false</publish_odom_tf>
+        <publish_wheel_tf>false</publish_wheel_tf>
+      </plugin>
+
+      <!-- Joint State Publisher -->
+      <plugin filename="libignition-gazebo-joint-state-publisher-system.so" name="ignition::gazebo::systems::JointStatePublisher">
+        <topic>joint_states</topic>
+        <joint_name>Wheel1J</joint_name>
+        <joint_name>Wheel2J</joint_name>
+        <joint_name>Wheel3J</joint_name>
+        <joint_name>Wheel4J</joint_name>
+       
+      </plugin>
+
+    </gazebo>
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot name="AgribotURDF7_withsensors" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <xacro:include filename="base.xacro" />
+  <xacro:include filename="wheels.xacro" />
+  <xacro:include filename="sensors.xacro" />
+  <xacro:include filename="gazebo_control.xacro" />
+
+  <!-- Base Link -->
+  <xacro:base_footprint_link />
+
+  <!-- Wheels -->
+  <xacro:wheel_macro name="Wheel1" parent="base_link" xyz="0.433438 -0.450476 -0.567" rpy="0 0 0" />
+  <xacro:wheel_macro name="Wheel2" parent="base_link" xyz="-0.476562 -0.455360 -0.567" rpy="0 0 0" />
+  <xacro:wheel_macro name="Wheel3" parent="base_link" xyz="-0.476562 0.406387 -0.567" rpy="0 0 0" />
+  <xacro:wheel_macro name="Wheel4" parent="base_link" xyz="0.433438 0.411271 -0.567" rpy="0 0 0" />
+
+  <!-- Sensors -->
+  <!-- Note: sensor_rpy is used to correct the frame for GPU Lidar (e.g., if tilted). 
+       Original URDF had specific compensations.
+       US1: joint 1.57 (90), sensor -1.57 (-90) -> Net 0?
+       US2: joint -1.57 (-90), sensor 1.57 (90) -> Net 0?
+       Basically correcting the mesh orientation to be horizontal?
+  -->
+  <xacro:us_sensor_macro name="US1" parent="base_link" 
+                         xyz="0.138 -0.422 -0.312" rpy="1.5708 0 -0.6283"
+                         sensor_rpy="-1.5708"
+                         topic_name="/ultra/us1" />
+                         
+  <xacro:us_sensor_macro name="US2" parent="base_link" 
+                         xyz="0.45 -0.282 -0.312" rpy="-1.5708 0 0"
+                         sensor_rpy="1.5708"
+                         topic_name="/ultra/us2" />
+
+  <xacro:us_sensor_macro name="US3" parent="base_link" 
+                         xyz="0.45 0.233 -0.312" rpy="1.5708 0 -0.3725"
+                         sensor_rpy="-1.5708"
+                         topic_name="/ultra/us3" />
+
+  <xacro:us_sensor_macro name="US4" parent="base_link" 
+                         xyz="0.138 0.373 -0.312" rpy="1.5708 0 0.6283"
+                         sensor_rpy="-1.5708"
+                         topic_name="/ultra/us4" />
+
+  <!-- Camera tilted 45 degrees downward (0.7854 rad) -->
+  <xacro:camera_sensor_macro parent="base_link" xyz="0.45 -0.0334 -0.337" rpy="0 0.95 0" />
+
+  <xacro:imu_gps_macro parent="base_link" />
+
+  <!-- Gazebo Control -->
+  <xacro:gazebo_control_macro />
+
+</robot>

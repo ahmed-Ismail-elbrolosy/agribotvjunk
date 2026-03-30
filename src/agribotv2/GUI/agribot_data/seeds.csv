@@ -1,0 +1,10 @@
+id,seed_name,planting_depth_cm,spacing_cm,germination_days,description
+1,Wheat,3.0,15.0,7,Common cereal grain
+2,Corn,5.0,30.0,10,Maize crop
+3,Soybean,4.0,7.5,7,Legume crop
+4,Tomato,1.5,60.0,7,Vegetable fruit
+5,Carrot,1.0,5.0,14,Root vegetable
+6,Potato,10.0,30.0,14,Tuber crop
+7,Lettuce,0.5,25.0,7,Leafy green
+8,Sunflower,2.5,45.0,10,Oilseed crop
+9,cactus,3,50.5,8,

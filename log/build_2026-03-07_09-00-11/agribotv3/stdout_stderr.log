@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing agribotv3.egg-info/PKG-INFO
+writing dependency_links to agribotv3.egg-info/dependency_links.txt
+writing entry points to agribotv3.egg-info/entry_points.txt
+writing requirements to agribotv3.egg-info/requires.txt
+writing top-level names to agribotv3.egg-info/top_level.txt
+reading manifest file 'agribotv3.egg-info/SOURCES.txt'
+writing manifest file 'agribotv3.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3.egg-link (link to .)
+Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+
+Installed /home/som3a-station/prjs/agribot/build/agribotv3
+running symlink_data

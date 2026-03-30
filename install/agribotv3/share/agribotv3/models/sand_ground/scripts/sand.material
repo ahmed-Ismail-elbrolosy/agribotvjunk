@@ -1,0 +1,16 @@
+material Sand/Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture sand.jpeg
+        # Increased tiling: larger scale -> more repetitions across the plane
+        # Set to 5 5 to repeat the texture 5 times in both U and V
+        scale 5 5
+      }
+    }
+  }
+}

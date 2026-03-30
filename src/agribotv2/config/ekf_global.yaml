@@ -1,0 +1,41 @@
+ekf_filter_node_global:
+  ros__parameters:
+    frequency: 30.0
+    two_d_mode: true
+    publish_tf: true
+    
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: map           # Global EKF provides Map frame
+
+    odom0: /odometry/fixed 
+    
+    # CONFIG: We typically use Velocity for Global fusion, letting GPS handle Position.
+    # X, Y, Z, Roll, Pitch, Yaw, dX, dY, dZ, dRoll, dPitch, dYaw, ddX...
+    odom0_config: [false, false, false,
+                   false, false, false,
+                   true,  true,  false,  # Use dX, dY (Velocity)
+                   false, false, true,   # Use dYaw (Angular Vel)
+                   false, false, false]
+    odom0_differential: false
+
+    # Imu0: IMU
+    imu0: /imu
+    imu0_config: [false, false, false,
+                  true,  true,  true,
+                  false, false, false,
+                  true,  true,  true,
+                  false, false, false]
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true
+
+    # Odom1: GPS (Output from NavSat Transform)
+    odom1: /odometry/gps
+    # Config: We only trust X and Y position from GPS
+    odom1_config: [true,  true,  false,
+                   false, false, false,
+                   false, false, false,
+                   false, false, false,
+                   false, false, false]
+    odom1_differential: false

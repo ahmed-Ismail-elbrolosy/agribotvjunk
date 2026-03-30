@@ -1,0 +1,105 @@
+[0.000000] (-) TimerEvent: {}
+[0.000197] (-) JobUnselected: {'identifier': 'agribotv2'}
+[0.000320] (agribotv3) JobQueued: {'identifier': 'agribotv3', 'dependencies': OrderedDict()}
+[0.000407] (agribotv3) JobStarted: {'identifier': 'agribotv3'}
+[0.090267] (-) TimerEvent: {}
+[0.190625] (-) TimerEvent: {}
+[0.290946] (-) TimerEvent: {}
+[0.391331] (-) TimerEvent: {}
+[0.496768] (-) TimerEvent: {}
+[0.597712] (-) TimerEvent: {}
+[0.704037] (-) TimerEvent: {}
+[0.804429] (-) TimerEvent: {}
+[0.904742] (-) TimerEvent: {}
+[1.009914] (-) TimerEvent: {}
+[1.110338] (-) TimerEvent: {}
+[1.211322] (-) TimerEvent: {}
+[1.318841] (-) TimerEvent: {}
+[1.419673] (-) TimerEvent: {}
+[1.525091] (-) TimerEvent: {}
+[1.625500] (-) TimerEvent: {}
+[1.726934] (-) TimerEvent: {}
+[1.830843] (-) TimerEvent: {}
+[1.938928] (-) TimerEvent: {}
+[2.039299] (-) TimerEvent: {}
+[2.139976] (-) TimerEvent: {}
+[2.240214] (-) TimerEvent: {}
+[2.344115] (-) TimerEvent: {}
+[2.444458] (-) TimerEvent: {}
+[2.549860] (-) TimerEvent: {}
+[2.650243] (-) TimerEvent: {}
+[2.750717] (-) TimerEvent: {}
+[2.852341] (-) TimerEvent: {}
+[2.952918] (-) TimerEvent: {}
+[3.057037] (-) TimerEvent: {}
+[3.157656] (-) TimerEvent: {}
+[3.258961] (-) TimerEvent: {}
+[3.364739] (-) TimerEvent: {}
+[3.466056] (-) TimerEvent: {}
+[3.566464] (-) TimerEvent: {}
+[3.672752] (-) TimerEvent: {}
+[3.774110] (-) TimerEvent: {}
+[3.874452] (-) TimerEvent: {}
+[3.977630] (-) TimerEvent: {}
+[4.078710] (-) TimerEvent: {}
+[4.179612] (-) TimerEvent: {}
+[4.282591] (-) TimerEvent: {}
+[4.300655] (agribotv3) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/agribotv3', 'build', '--build-base', '/home/som3a-station/prjs/agribot/build/agribotv3/build', 'install', '--record', '/home/som3a-station/prjs/agribot/build/agribotv3/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/som3a-station/prjs/agribot/src/agribotv3', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'som3a-station', 'FONTCONFIG_PATH': '/etc/fonts', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIO_MODULE_DIR': '/home/som3a-station/snap/code/common/.cache/gio-modules', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'GTK_EXE_PREFIX_VSCODE_SNAP_ORIG': '', 'GDK_BACKEND_VSCODE_SNAP_ORIG': '', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/usr/local/cuda-12.5/lib64:/usr/local/cuda-12.5/lib64', 'HOME': '/home/som3a-station', 'CHROME_DESKTOP': 'code.desktop', 'LOCPATH_VSCODE_SNAP_ORIG': '', 'TERM_PROGRAM_VERSION': '1.109.5', 'DESKTOP_SESSION': 'ubuntu', 'GTK_PATH': '/snap/code/226/usr/lib/x86_64-linux-gnu/gtk-3.0', 'XDG_DATA_HOME_VSCODE_SNAP_ORIG': '', 'GTK_IM_MODULE_FILE': '/home/som3a-station/snap/code/common/.cache/immodules/immodules.cache', 'GIO_LAUNCHED_DESKTOP_FILE': '/var/lib/snapd/desktop/applications/code_code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG': '', 'VSCODE_GIT_ASKPASS_MAIN': '/snap/code/226/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/snap/code/226/usr/share/code/code', 'MANAGERPID': '2426', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2726', 'BUNDLED_DEBUGPY_PATH': '/home/som3a-station/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '52414', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/som3a-station/prjs/agribot/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'som3a-station', 'JOURNAL_STREAM': '9:19997', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'XDG_DATA_DIRS_VSCODE_SNAP_ORIG': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'USERNAME': 'som3a-station', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'HISTCONTROL': 'ignorespace', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/cuda-12.5/bin:/home/som3a-station/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/som3a-station/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/som3a-station/.local/bin:/usr/local/cuda-12.5/bin:/home/som3a-station/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/som3a-station/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/som3a-station-HP-ZBook-15-G4:@/tmp/.ICE-unix/2693,unix/som3a-station-HP-ZBook-15-G4:/tmp/.ICE-unix/2693', 'GTK_EXE_PREFIX': '/snap/code/226/usr', 'INVOCATION_ID': '1c9fd861bc4640598472cf112dd04df6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LOCPATH': '/snap/code/226/usr/lib/locale', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/som3a-station/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-ff30aec337619c90.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/som3a-station/.config/Code/User/workspaceStorage/8f2efa0d9a0815a36786d269dbfded7c/ms-python.python/pythonrc.py', 'GIO_MODULE_DIR_VSCODE_SNAP_ORIG': '', 'XDG_DATA_HOME': '/home/som3a-station/snap/code/226/.local/share', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.S2LGL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-172a9cabb7.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'GSETTINGS_SCHEMA_DIR': '/home/som3a-station/snap/code/226/.local/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/som3a-station/prjs/agribot/install/agribotv3:/home/som3a-station/prjs/agribot/install/agribotv2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GTK_PATH_VSCODE_SNAP_ORIG': '', 'FONTCONFIG_FILE': '/etc/fonts/fonts.conf', 'GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG': '', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/som3a-station/prjs/agribot/build/agribotv3', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/home/som3a-station/snap/code/226/.local/share:/home/som3a-station/snap/code/226:/snap/code/226/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:/home/som3a-station/prjs/agribot/build/agribotv2:/home/som3a-station/prjs/agribot/install/agribotv2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.382824] (-) TimerEvent: {}
+[4.484629] (-) TimerEvent: {}
+[4.585020] (-) TimerEvent: {}
+[4.689243] (-) TimerEvent: {}
+[4.789631] (-) TimerEvent: {}
+[4.890249] (-) TimerEvent: {}
+[4.990819] (-) TimerEvent: {}
+[5.091770] (-) TimerEvent: {}
+[5.195041] (-) TimerEvent: {}
+[5.295262] (-) TimerEvent: {}
+[5.395656] (-) TimerEvent: {}
+[5.496741] (-) TimerEvent: {}
+[5.597694] (-) TimerEvent: {}
+[5.682234] (agribotv3) StdoutLine: {'line': b'running egg_info\n'}
+[5.701629] (-) TimerEvent: {}
+[5.801992] (-) TimerEvent: {}
+[5.835761] (agribotv3) StdoutLine: {'line': b'writing ../../build/agribotv3/agribotv3.egg-info/PKG-INFO\n'}
+[5.838050] (agribotv3) StdoutLine: {'line': b'writing dependency_links to ../../build/agribotv3/agribotv3.egg-info/dependency_links.txt\n'}
+[5.838464] (agribotv3) StdoutLine: {'line': b'writing entry points to ../../build/agribotv3/agribotv3.egg-info/entry_points.txt\n'}
+[5.839296] (agribotv3) StdoutLine: {'line': b'writing requirements to ../../build/agribotv3/agribotv3.egg-info/requires.txt\n'}
+[5.840080] (agribotv3) StdoutLine: {'line': b'writing top-level names to ../../build/agribotv3/agribotv3.egg-info/top_level.txt\n'}
+[5.902119] (-) TimerEvent: {}
+[6.003742] (-) TimerEvent: {}
+[6.087252] (agribotv3) StdoutLine: {'line': b"reading manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'\n"}
+[6.092042] (agribotv3) StdoutLine: {'line': b"writing manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'\n"}
+[6.093457] (agribotv3) StdoutLine: {'line': b'running build\n'}
+[6.093922] (agribotv3) StdoutLine: {'line': b'running build_py\n'}
+[6.098978] (agribotv3) StdoutLine: {'line': b'running install\n'}
+[6.105636] (-) TimerEvent: {}
+[6.118370] (agribotv3) StdoutLine: {'line': b'running install_lib\n'}
+[6.205902] (-) TimerEvent: {}
+[6.249091] (agribotv3) StdoutLine: {'line': b'running install_data\n'}
+[6.249362] (agribotv3) StdoutLine: {'line': b'copying urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT\n'}
+[6.253915] (agribotv3) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.307242] (-) TimerEvent: {}
+[6.407803] (-) TimerEvent: {}
+[6.432650] (agribotv3) StdoutLine: {'line': b"removing '/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info' (and everything under it)\n"}
+[6.432959] (agribotv3) StdoutLine: {'line': b'Copying ../../build/agribotv3/agribotv3.egg-info to /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info\n'}
+[6.433120] (agribotv3) StdoutLine: {'line': b'running install_scripts\n'}
+[6.509458] (-) TimerEvent: {}
+[6.610014] (-) TimerEvent: {}
+[6.710805] (-) TimerEvent: {}
+[6.815089] (-) TimerEvent: {}
+[6.918591] (-) TimerEvent: {}
+[7.019303] (-) TimerEvent: {}
+[7.070324] (agribotv3) StdoutLine: {'line': b'Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.073745] (agribotv3) StdoutLine: {'line': b'Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.073934] (agribotv3) StdoutLine: {'line': b'Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.074086] (agribotv3) StdoutLine: {'line': b'Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.074228] (agribotv3) StdoutLine: {'line': b'Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.074361] (agribotv3) StdoutLine: {'line': b'Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3\n'}
+[7.074489] (agribotv3) StdoutLine: {'line': b"writing list of installed files to '/home/som3a-station/prjs/agribot/build/agribotv3/install.log'\n"}
+[7.121311] (-) TimerEvent: {}
+[7.221790] (-) TimerEvent: {}
+[7.292238] (agribotv3) CommandEnded: {'returncode': 0}
+[7.326099] (-) TimerEvent: {}
+[7.341505] (agribotv3) JobEnded: {'identifier': 'agribotv3', 'rc': 0}
+[7.344105] (-) EventReactorShutdown: {}

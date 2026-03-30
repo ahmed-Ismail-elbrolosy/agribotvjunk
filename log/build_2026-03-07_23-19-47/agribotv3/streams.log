@@ -1,0 +1,27 @@
+[4.303s] Invoking command in '/home/som3a-station/prjs/agribot/src/agribotv3': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/agribotv3 build --build-base /home/som3a-station/prjs/agribot/build/agribotv3/build install --record /home/som3a-station/prjs/agribot/build/agribotv3/install.log --single-version-externally-managed install_data
+[5.683s] running egg_info
+[5.836s] writing ../../build/agribotv3/agribotv3.egg-info/PKG-INFO
+[5.838s] writing dependency_links to ../../build/agribotv3/agribotv3.egg-info/dependency_links.txt
+[5.838s] writing entry points to ../../build/agribotv3/agribotv3.egg-info/entry_points.txt
+[5.839s] writing requirements to ../../build/agribotv3/agribotv3.egg-info/requires.txt
+[5.840s] writing top-level names to ../../build/agribotv3/agribotv3.egg-info/top_level.txt
+[6.087s] reading manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+[6.093s] writing manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+[6.093s] running build
+[6.094s] running build_py
+[6.099s] running install
+[6.118s] running install_lib
+[6.249s] running install_data
+[6.249s] copying urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[6.254s] running install_egg_info
+[6.432s] removing '/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info' (and everything under it)
+[6.433s] Copying ../../build/agribotv3/agribotv3.egg-info to /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info
+[6.433s] running install_scripts
+[7.073s] Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.073s] Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.074s] Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.074s] Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.074s] Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.074s] Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[7.074s] writing list of installed files to '/home/som3a-station/prjs/agribot/build/agribotv3/install.log'
+[7.293s] Invoked command in '/home/som3a-station/prjs/agribot/src/agribotv3' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/agribotv3 build --build-base /home/som3a-station/prjs/agribot/build/agribotv3/build install --record /home/som3a-station/prjs/agribot/build/agribotv3/install.log --single-version-externally-managed install_data

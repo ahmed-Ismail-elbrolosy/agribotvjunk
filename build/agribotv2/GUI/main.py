@@ -1,0 +1,1 @@
+/home/som3a-station/prjs/agribot/src/agribotv2/GUI/main.py

@@ -1,0 +1,112 @@
+[5.694s] Invoking command in '/home/som3a-station/prjs/agribot/build/agribotv3': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build
+[7.084s] running develop
+[7.730s] Removing /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3.egg-link (link to .)
+[8.038s] Invoked command in '/home/som3a-station/prjs/agribot/build/agribotv3' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build
+[8.049s] Invoking command in '/home/som3a-station/prjs/agribot/src/agribotv3': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/agribotv3 build --build-base /home/som3a-station/prjs/agribot/build/agribotv3/build install --record /home/som3a-station/prjs/agribot/build/agribotv3/install.log --single-version-externally-managed install_data --force
+[8.928s] running egg_info
+[8.998s] writing ../../build/agribotv3/agribotv3.egg-info/PKG-INFO
+[9.008s] writing dependency_links to ../../build/agribotv3/agribotv3.egg-info/dependency_links.txt
+[9.009s] writing entry points to ../../build/agribotv3/agribotv3.egg-info/entry_points.txt
+[9.009s] writing requirements to ../../build/agribotv3/agribotv3.egg-info/requires.txt
+[9.009s] writing top-level names to ../../build/agribotv3/agribotv3.egg-info/top_level.txt
+[9.188s] reading manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+[9.193s] writing manifest file '../../build/agribotv3/agribotv3.egg-info/SOURCES.txt'
+[9.199s] running build
+[9.200s] running build_py
+[9.200s] creating /home/som3a-station/prjs/agribot/build/agribotv3/build
+[9.200s] creating /home/som3a-station/prjs/agribot/build/agribotv3/build/lib
+[9.200s] creating /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.200s] copying agribotv3/__init__.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.200s] copying agribotv3/vision_node.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.200s] copying agribotv3/ultrasonic_converter.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.201s] copying agribotv3/csv_costmap_node.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.201s] copying agribotv3/static_map_tf.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.201s] copying agribotv3/teleop.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3
+[9.201s] creating /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.201s] copying agribotv3/gui/__init__.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.205s] copying agribotv3/gui/config.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.205s] copying agribotv3/gui/database.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.206s] copying agribotv3/gui/app.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.210s] copying agribotv3/gui/controller.py -> /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui
+[9.217s] running install
+[9.236s] running install_lib
+[9.311s] creating /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.311s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/__init__.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.315s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/vision_node.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.315s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/ultrasonic_converter.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.315s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/csv_costmap_node.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.316s] creating /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui/__init__.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui/config.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui/database.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui/app.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/gui/controller.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/static_map_tf.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.316s] copying /home/som3a-station/prjs/agribot/build/agribotv3/build/lib/agribotv3/teleop.py -> /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3
+[9.317s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/__init__.py to __init__.cpython-312.pyc
+[9.317s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/vision_node.py to vision_node.cpython-312.pyc
+[9.323s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/ultrasonic_converter.py to ultrasonic_converter.cpython-312.pyc
+[9.324s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/csv_costmap_node.py to csv_costmap_node.cpython-312.pyc
+[9.331s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui/__init__.py to __init__.cpython-312.pyc
+[9.331s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui/config.py to config.cpython-312.pyc
+[9.331s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui/database.py to database.cpython-312.pyc
+[9.344s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui/app.py to app.cpython-312.pyc
+[9.382s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/gui/controller.py to controller.cpython-312.pyc
+[9.390s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/static_map_tf.py to static_map_tf.cpython-312.pyc
+[9.392s] byte-compiling /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3/teleop.py to teleop.cpython-312.pyc
+[9.405s] running install_data
+[9.405s] copying resource/agribotv3 -> /home/som3a-station/prjs/agribot/install/agribotv3/share/ament_index/resource_index/packages
+[9.406s] copying package.xml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3
+[9.406s] copying launch/full.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[9.406s] copying launch/nav.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[9.407s] copying launch/sim.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[9.407s] copying config/nav2_params.yaml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+[9.407s] copying config/ekf.yaml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+[9.426s] copying config/rviz/basic_rvizconfig.rviz -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config/rviz
+[9.427s] copying data/grid_cells.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[9.428s] copying data/soil_scans.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[9.428s] copying data/seeds.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[9.429s] copying urdf/AgribotURDF7_withsensors.urdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf
+[9.429s] copying urdf/THEBOT/base.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[9.429s] copying urdf/THEBOT/robot.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[9.429s] copying urdf/THEBOT/sensors.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[9.429s] copying urdf/THEBOT/wheels.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[9.434s] copying urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[9.434s] copying meshes/Camera.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.434s] copying meshes/base_link.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.434s] copying meshes/Wheel2.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.434s] copying meshes/US4.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.438s] copying meshes/Wheel3.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.438s] copying meshes/US1.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.438s] copying meshes/US2.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.439s] copying meshes/Seeder.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.439s] copying meshes/Wheel1.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.448s] copying meshes/Wheel4.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.455s] copying meshes/US3.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[9.457s] copying worlds/orchard.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.457s] copying worlds/farmWith1CropRow.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.458s] copying worlds/real.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.471s] copying worlds/farm_textured.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.471s] copying worlds/real_copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.471s] copying worlds/emptysurroundedWithBoxes.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.471s] copying worlds/real copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[9.472s] copying models/big_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant
+[9.472s] copying models/big_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant
+[9.472s] copying models/big_plant/mesh/big_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant/mesh
+[9.472s] copying models/small_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant
+[9.473s] copying models/small_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant
+[9.473s] copying models/small_plant/mesh/small_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant/mesh
+[9.474s] copying models/sand_ground/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground
+[9.474s] copying models/sand_ground/textures/sand.jpeg -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/textures
+[9.474s] copying models/sand_ground/scripts/sand.material -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/scripts
+[9.474s] running install_egg_info
+[9.525s] Copying ../../build/agribotv3/agribotv3.egg-info to /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3-3.0.0-py3.12.egg-info
+[9.528s] running install_scripts
+[9.960s] Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.966s] Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.966s] Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.971s] Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.972s] Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.972s] Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[9.972s] writing list of installed files to '/home/som3a-station/prjs/agribot/build/agribotv3/install.log'
+[10.334s] Invoked command in '/home/som3a-station/prjs/agribot/src/agribotv3' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/agribotv3 build --build-base /home/som3a-station/prjs/agribot/build/agribotv3/build install --record /home/som3a-station/prjs/agribot/build/agribotv3/install.log --single-version-externally-managed install_data --force

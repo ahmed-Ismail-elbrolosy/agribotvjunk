@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="base_footprint_link" params="">
+    <link name="base_link">
+      <inertial>
+        <origin xyz="-0.0430250954057444 -0.0246392144099035 -0.216670102531587" rpy="0 0 0" />
+        <mass value="42.7274264703138" />
+        <inertia ixx="1.21966121753246" ixy="0.00406966070672543" ixz="0.000339980127575844" iyy="3.17622187148375" iyz="0.000152831870700138" izz="4.18415118315828" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://agribotv3/meshes/base_link.STL" />
+        </geometry>
+        <material name="">
+            <color rgba="0.866 0.909 1 1" />
+        </material>
+      </visual>
+      <collision>
+        <!-- Lift the box up slightly so it doesn't drag on the ground -->
+        <origin xyz="0 0 0.15" rpy="0 0 0"/> 
+        <geometry>
+          <!-- Make this box smaller than the distance between wheels -->
+          <!-- Length(x) Width(y) Height(z) -->
+          <box size="0.6 0.4 0.2"/> 
+        </geometry>
+      </collision>
+
+    </link>
+
+    <!-- Seeder Link -->
+    <link name="Seeder">
+      <inertial>
+        <origin xyz="-0.00565167876018524 8.97751948416015E-05 -0.0302124488119062" rpy="0 0 0" />
+        <mass value="1.19140713287901" />
+        <inertia ixx="0.00572757836043353" ixy="-1.1313835092507E-07" ixz="8.44849373187445E-06" iyy="0.00576192418600774" iyz="-1.14186514103829E-07" izz="0.000396595843384034" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://agribotv3/meshes/Seeder.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="0 0 1 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://agribotv3/meshes/Seeder.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <gazebo reference="Seeder">
+      <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <joint name="SeederJ" type="fixed">
+      <origin xyz="0.121937506662726 -0.0244867375890883 -0.293552999840268" rpy="0 0 -3.14159265358979" />
+      <parent link="base_link" />
+      <child link="Seeder" />
+      <axis xyz="0 0 -1" />
+    </joint>
+
+    <!-- Origin Marker (Debug Visual) -->
+    <link name="origin_marker">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <sphere radius="0.03"/>
+        </geometry>
+        <material name="origin_red">
+          <color rgba="1 0 0 1" />
+        </material>
+      </visual>
+    </link>
+    <gazebo reference="origin_marker">
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <joint name="origin_marker_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="origin_marker" />
+    </joint>
+
+    <!-- Forward Direction Marker (+X axis) -->
+    <link name="forward_marker">
+      <visual>
+        <origin xyz="0.15 0 0" rpy="0 1.5708 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.3"/>
+        </geometry>
+        <material name="forward_green">
+          <color rgba="0 1 0 1" />
+        </material>
+      </visual>
+    </link>
+    <gazebo reference="forward_marker">
+      <material>Gazebo/Green</material>
+    </gazebo>
+
+    <joint name="forward_marker_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="forward_marker" />
+    </joint>
+
+  </xacro:macro>
+</robot>

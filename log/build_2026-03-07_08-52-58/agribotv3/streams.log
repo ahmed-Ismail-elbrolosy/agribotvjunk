@@ -1,0 +1,87 @@
+[1.220s] Invoking command in '/home/som3a-station/prjs/agribot/build/agribotv3': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.agribot_venv_vision) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build --no-deps symlink_data
+[1.666s] running develop
+[1.960s] running egg_info
+[1.960s] creating agribotv3.egg-info
+[1.988s] writing agribotv3.egg-info/PKG-INFO
+[1.988s] writing dependency_links to agribotv3.egg-info/dependency_links.txt
+[1.988s] writing entry points to agribotv3.egg-info/entry_points.txt
+[1.989s] writing requirements to agribotv3.egg-info/requires.txt
+[1.989s] writing top-level names to agribotv3.egg-info/top_level.txt
+[1.989s] writing manifest file 'agribotv3.egg-info/SOURCES.txt'
+[2.047s] reading manifest file 'agribotv3.egg-info/SOURCES.txt'
+[2.048s] writing manifest file 'agribotv3.egg-info/SOURCES.txt'
+[2.128s] running build_ext
+[2.128s] Creating /home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages/agribotv3.egg-link (link to .)
+[2.129s] Installing csv_costmap_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.129s] Installing gui script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.129s] Installing static_map_tf script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.129s] Installing teleop script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.129s] Installing ultrasonic_converter script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.130s] Installing vision_node script to /home/som3a-station/prjs/agribot/install/agribotv3/lib/agribotv3
+[2.130s] 
+[2.130s] Installed /home/som3a-station/prjs/agribot/build/agribotv3
+[2.130s] running symlink_data
+[2.130s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/ament_index
+[2.131s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/ament_index/resource_index
+[2.132s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/ament_index/resource_index/packages
+[2.132s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/resource/agribotv3 -> /home/som3a-station/prjs/agribot/install/agribotv3/share/ament_index/resource_index/packages
+[2.133s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/package.xml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3
+[2.133s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[2.134s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/launch/full.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[2.135s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/launch/nav.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[2.136s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/launch/sim.launch.py -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/launch
+[2.136s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+[2.136s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/config/nav2_params.yaml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+[2.136s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/config/ekf.yaml -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config
+[2.137s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config/rviz
+[2.137s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/config/rviz/basic_rvizconfig.rviz -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/config/rviz
+[2.138s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[2.138s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/data/grid_cells.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[2.138s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/data/soil_scans.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[2.138s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/data/seeds.csv -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/data
+[2.138s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf
+[2.138s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/AgribotURDF7_withsensors.urdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf
+[2.138s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.138s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/THEBOT/base.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/THEBOT/robot.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/THEBOT/sensors.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/THEBOT/wheels.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/urdf/THEBOT/gazebo_control.xacro -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/urdf/THEBOT
+[2.139s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Camera.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/base_link.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Wheel2.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.139s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/US4.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Wheel3.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/US1.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/US2.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Seeder.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Wheel1.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/Wheel4.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/meshes/US3.STL -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/meshes
+[2.140s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/orchard.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/farmWith1CropRow.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/real.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/farm_textured.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.140s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/real_copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/emptysurroundedWithBoxes.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/worlds/real copy.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/worlds
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/big_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/big_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant/mesh
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/big_plant/mesh/big_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/big_plant/mesh
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/small_plant/model.sdf -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/small_plant/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant/mesh
+[2.141s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/small_plant/mesh/small_plant.stl -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/small_plant/mesh
+[2.141s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground
+[2.142s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/sand_ground/model.config -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground
+[2.142s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/textures
+[2.142s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/sand_ground/textures/sand.jpeg -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/textures
+[2.142s] creating /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/scripts
+[2.142s] symbolically linking /home/som3a-station/prjs/agribot/build/agribotv3/models/sand_ground/scripts/sand.material -> /home/som3a-station/prjs/agribot/install/agribotv3/share/agribotv3/models/sand_ground/scripts
+[2.185s] Invoked command in '/home/som3a-station/prjs/agribot/build/agribotv3' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/som3a-station/prjs/agribot/build/agribotv3/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/som3a-station/prjs/agribot/install/agribotv3/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.agribot_venv_vision) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/som3a-station/prjs/agribot/build/agribotv3/build --no-deps symlink_data

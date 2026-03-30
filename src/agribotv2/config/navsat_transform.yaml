@@ -1,0 +1,14 @@
+navsat_transform_node:
+  ros__parameters:
+    frequency: 30.0
+    delay: 3.0
+    magnetic_declination_radians: 0.0
+    yaw_offset: 0.0
+    zero_altitude: true
+    broadcast_utm_transform: true
+    publish_filtered_gps: true
+    use_odometry_yaw: false
+    
+    # ADD THIS TO STOP THE WORLD FROM JUMPING
+    wait_for_datum: true
+    datum: [30.0, 31.0, 0.0]  # Replace with the approximate Lat/Lon of your Gazebo world origin

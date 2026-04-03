@@ -1,5 +1,8 @@
 # AgriBot GUI Control System
 
+
+> **Note:** For the newer NiceGUI dashboard (`agribotv3`), the GUI can run standalone and wait for ROS topics without crashing when publishers are absent.
+
 This project is a modular GUI application for controlling an agricultural robot using **ROS 2** and **PyQt5**. It handles path planning, manual control, sensor visualization, and database management for farming tasks like planting and soil scanning.
 
 ---

@@ -21,6 +21,7 @@ from launch.actions import (
     IncludeLaunchDescription,
     SetEnvironmentVariable,
 )
+from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
@@ -42,6 +43,7 @@ def generate_launch_description():
     data_dir = os.path.join(pkg_share, 'data')
 
     use_sim_time = LaunchConfiguration('use_sim_time')
+    enable_reserved_bridges = LaunchConfiguration('enable_reserved_bridges')
 
     # ── environment ──────────────────────────────────────────
     env_gz = SetEnvironmentVariable(
@@ -80,25 +82,37 @@ def generate_launch_description():
     )
 
     # ── ros_gz_bridge ─────────────────────────────────────────
+    # Active bridges used by today's simulation stack.
+    # Keep this list lean: control, odom/odom_gt source, ultras, camera, clock, TF plumbing.
+    active_bridge_arguments = [
+        '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
+        '/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry',
+        # Bridge dynamic_pose as TFMessage to a PRIVATE topic
+        # (NOT /tf — that would conflict with RSP).
+        # ground_truth_odom node extracts model pose → /odom_gt.
+        '/world/SinaiAgri/dynamic_pose/info@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
+        '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+        '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
+        '/ultra/us1@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+        '/ultra/us2@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+        '/ultra/us3@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+        '/ultra/us4@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+        '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
+        '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+    ]
+
+    # Reserved bridges for future hardware/testing migration hooks.
+    # Examples to keep here as we grow:
+    #   - GPS fixes/velocities (NavSatFix/TwistWithCovariance)
+    #   - additional IMUs or depth/LiDAR feeds
+    #   - optional debug/telemetry sensor topics
+    reserved_bridge_arguments = [
+        '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
+    ]
+
     bridge = Node(
         package='ros_gz_bridge', executable='parameter_bridge',
-        arguments=[
-            '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
-            '/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry',
-            # Bridge dynamic_pose as TFMessage to a PRIVATE topic
-            # (NOT /tf — that would conflict with RSP).
-            # ground_truth_odom node extracts model pose → /odom_gt.
-            '/world/SinaiAgri/dynamic_pose/info@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
-            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
-            '/ultra/us1@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/ultra/us2@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/ultra/us3@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/ultra/us4@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-            '/camera/image_raw@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
-            '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
-        ],
+        arguments=active_bridge_arguments,
         remappings=[
             ('/ultra/us1', '/ultra/us1/scan'),
             ('/ultra/us2', '/ultra/us2/scan'),
@@ -106,6 +120,13 @@ def generate_launch_description():
             ('/ultra/us4', '/ultra/us4/scan'),
             ('/world/SinaiAgri/dynamic_pose/info', '/gz_dynamic_poses'),
         ],
+        output='screen',
+    )
+
+    reserved_bridge = Node(
+        package='ros_gz_bridge', executable='parameter_bridge',
+        arguments=reserved_bridge_arguments,
+        condition=IfCondition(enable_reserved_bridges),
         output='screen',
     )
 
@@ -149,8 +170,13 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
+        DeclareLaunchArgument(
+            'enable_reserved_bridges',
+            default_value='false',
+            description='Enable reserved bridge topics for future hardware/testing feeds.',
+        ),
         env_gz, env_gpu1, env_gpu2,
-        gazebo, spawn, rsp, bridge,
+        gazebo, spawn, rsp, bridge, reserved_bridge,
         ground_truth, ekf, static_map_tf,
         ultrasonic, csv_costmap,
     ])

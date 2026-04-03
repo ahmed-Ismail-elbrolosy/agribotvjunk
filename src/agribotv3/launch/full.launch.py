@@ -72,13 +72,17 @@ def generate_launch_description():
     pkg_share = get_package_share_directory(pkg)
     launch_dir = os.path.join(pkg_share, 'launch')
     use_sim_time = LaunchConfiguration('use_sim_time')
+    localization_mode = LaunchConfiguration('localization_mode')
 
     venv_python = _find_venv()
 
     # ── Simulation layer ──────────────────────────────────────
     sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(launch_dir, 'sim.launch.py')),
-        launch_arguments={'use_sim_time': use_sim_time}.items(),
+        launch_arguments={
+            'use_sim_time': use_sim_time,
+            'localization_mode': localization_mode,
+        }.items(),
     )
 
     # ── Nav2 (delayed 12 s to let Gazebo + EKF settle) ───────
@@ -138,6 +142,12 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
+        DeclareLaunchArgument(
+            'localization_mode',
+            default_value='sim_gt',
+            choices=['sim_gt', 'hw'],
+            description='EKF mode forwarded to sim.launch.py',
+        ),
         sim,
         nav,
         vision,

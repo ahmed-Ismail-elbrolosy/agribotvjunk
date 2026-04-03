@@ -16,13 +16,14 @@ import os
 import xacro
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.conditions import IfCondition
 from launch.actions import (
     DeclareLaunchArgument,
     IncludeLaunchDescription,
     SetEnvironmentVariable,
 )
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
 
 
@@ -38,7 +39,8 @@ def generate_launch_description():
     worlds_dir = os.path.join(pkg_share, 'worlds')
     models_dir = os.path.join(pkg_share, 'models')
     world_file = os.path.join(worlds_dir, 'real_copy.sdf')
-    ekf_config = os.path.join(pkg_share, 'config', 'ekf.yaml')
+    ekf_sim_gt_config = os.path.join(pkg_share, 'config', 'ekf_sim_ground_truth.yaml')
+    ekf_hw_config = os.path.join(pkg_share, 'config', 'ekf_hw.yaml')
     data_dir = os.path.join(pkg_share, 'data')
 
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -109,11 +111,21 @@ def generate_launch_description():
         output='screen',
     )
 
+    localization_mode = LaunchConfiguration('localization_mode')
+
     # ── EKF (robot_localization) ──────────────────────────────
-    ekf = Node(
+    ekf_sim_gt = Node(
         package='robot_localization', executable='ekf_node',
         name='ekf_filter_node', output='screen',
-        parameters=[ekf_config, {'use_sim_time': use_sim_time}],
+        parameters=[ekf_sim_gt_config, {'use_sim_time': use_sim_time}],
+        condition=IfCondition(PythonExpression(["'", localization_mode, "' == 'sim_gt'"])),
+    )
+
+    ekf_hw = Node(
+        package='robot_localization', executable='ekf_node',
+        name='ekf_filter_node', output='screen',
+        parameters=[ekf_hw_config, {'use_sim_time': use_sim_time}],
+        condition=IfCondition(PythonExpression(["'", localization_mode, "' == 'hw'"])),
     )
 
     # ── Static map → odom TF ─────────────────────────────────
@@ -149,8 +161,14 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
+        DeclareLaunchArgument(
+            'localization_mode',
+            default_value='sim_gt',
+            choices=['sim_gt', 'hw'],
+            description='EKF mode: sim_gt uses /odom_gt, hw uses wheel odom + IMU',
+        ),
         env_gz, env_gpu1, env_gpu2,
         gazebo, spawn, rsp, bridge,
-        ground_truth, ekf, static_map_tf,
+        ground_truth, ekf_sim_gt, ekf_hw, static_map_tf,
         ultrasonic, csv_costmap,
     ])

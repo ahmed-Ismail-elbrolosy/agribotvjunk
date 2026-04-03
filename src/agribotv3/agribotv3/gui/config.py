@@ -1,146 +1,96 @@
-"""World, grid, robot & sensor constants — no ROS / GUI dependencies."""
+"""Shared GUI configuration for AgriBot v3."""
+from __future__ import annotations
+
+import csv
 import math
 import os
-import csv
-import csv
+from typing import Final
 
-# ── World bounds (metres) ────────────────────────────────────
-WORLD_MIN_X = -2.0
-WORLD_MAX_X = 12.0
-WORLD_MIN_Y = -7.0
-WORLD_MAX_Y = 7.0
+# World bounds (metres)
+WORLD_MIN_X: Final[float] = -2.0
+WORLD_MAX_X: Final[float] = 12.0
+WORLD_MIN_Y: Final[float] = -7.0
+WORLD_MAX_Y: Final[float] = 7.0
 
-# ── Grid ─────────────────────────────────────────────────────
-GRID_CELL_SIZE = 2.0
-
-GRID_CONFIG = {
-    'min_x': 1.0,  'min_y': -3.0,
-    'max_x': 7.0,  'max_y':  3.0,
-    'rows': 3,     'cols': 3,
+# Legacy farm grid (3x3)
+GRID_CONFIG: Final[dict[str, float | int]] = {
+    'min_x': 1.0,
+    'min_y': -3.0,
+    'max_x': 7.0,
+    'max_y': 3.0,
+    'rows': 3,
+    'cols': 3,
 }
+CELL_W: Final[float] = (GRID_CONFIG['max_x'] - GRID_CONFIG['min_x']) / GRID_CONFIG['cols']
+CELL_H: Final[float] = (GRID_CONFIG['max_y'] - GRID_CONFIG['min_y']) / GRID_CONFIG['rows']
 
-CELL_W = (GRID_CONFIG['max_x'] - GRID_CONFIG['min_x']) / GRID_CONFIG['cols']  # 2.0
-CELL_H = (GRID_CONFIG['max_y'] - GRID_CONFIG['min_y']) / GRID_CONFIG['rows']  # 2.0
+# Vehicle dimensions
+ROBOT_LENGTH: Final[float] = 1.2
+ROBOT_WIDTH: Final[float] = 0.7
 
-# ── Robot ────────────────────────────────────────────────────
-ROBOT_LENGTH = 1.2
-ROBOT_WIDTH  = 0.7
-
-# ── Ultrasonic sensors ──────────────────────────────────────
-SENSOR_OFFSETS = {
-    'us1': {'x':  0.138, 'y': -0.422, 'yaw': -0.6283},   # right
-    'us2': {'x':  0.45,  'y': -0.282, 'yaw':  0.0},       # front-right
-    'us3': {'x':  0.45,  'y':  0.233, 'yaw': -0.3725},    # front-left
-    'us4': {'x':  0.138, 'y':  0.373, 'yaw':  0.6283},    # left
+# Ultrasonic geometry and rendering
+SENSOR_OFFSETS: Final[dict[str, dict[str, float]]] = {
+    'us1': {'x': 0.138, 'y': -0.422, 'yaw': -0.6283},
+    'us2': {'x': 0.45, 'y': -0.282, 'yaw': 0.0},
+    'us3': {'x': 0.45, 'y': 0.233, 'yaw': -0.3725},
+    'us4': {'x': 0.138, 'y': 0.373, 'yaw': 0.6283},
 }
-US_FOV       = math.radians(60)
-US_MAX_RANGE = 4.0
+US_FOV: Final[float] = math.radians(60)
+US_MAX_RANGE: Final[float] = 4.0
 
-# ── Colours (hex for web UI) ────────────────────────────────
-STATE_COLOURS = {
-    'empty':    '#d4c89a',
-    'scanned':  '#6ec6ff',
+# Visual palette
+STATE_COLOURS: Final[dict[str, str]] = {
+    'empty': '#d4c89a',
+    'scanned': '#6ec6ff',
     'detected': '#ffa726',
-    'planted':  '#66bb6a',
-    'checked':  '#ab47bc',
+    'planted': '#66bb6a',
+    'checked': '#ab47bc',
 }
 
-# ── Plant cell states (from plants.csv) ─────────────────────────
-PLANT_STATE_COLOURS = {
+PLANT_STATE_COLOURS: Final[dict[str, str]] = {
     'not_planted': '#808080',
-    'detected':    '#FFD700',
-    # 'planted' → colour comes from batch
+    'detected': '#FFD700',
 }
 
-# ── Batch palette (deterministic: hash(batch_id) % len) ─────────
-BATCH_COLOURS = [
-    '#00CED1', '#FF6B35', '#7B68EE', '#32CD32',
-    '#FF69B4', '#20B2AA', '#FF4500', '#9370DB',
-    '#E91E63', '#00BCD4',
+BATCH_COLOURS: Final[list[str]] = [
+    '#00CED1', '#FF6B35', '#7B68EE', '#32CD32', '#FF69B4',
+    '#20B2AA', '#FF4500', '#9370DB', '#E91E63', '#00BCD4',
 ]
+
+# Mission defaults
+SOIL_SCAN_DWELL: Final[float] = 2.0
+SOIL_SCAN_N_DEFAULT: Final[int] = 3
+PLANT_CELL_SIZE: Final[float] = 1.0
+
+# Future Nav2 integration points for motion stack/obstacle avoidance modules
+NAV2_TOPICS: Final[dict[str, str]] = {
+    'cmd_vel': '/cmd_vel',
+    'odometry': '/odometry/filtered',
+    'global_plan': '/plan',
+    'goal_action': 'navigate_to_pose',
+    'waypoints_action': 'follow_waypoints',
+}
+
+_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
+SEEDS_CSV = os.path.join(_DATA_DIR, 'seeds.csv')
+PLANTS_CSV = os.path.join(_DATA_DIR, 'plants.csv')
 
 
 def get_batch_colour(batch_id: str) -> str:
     return BATCH_COLOURS[hash(batch_id) % len(BATCH_COLOURS)]
 
 
-# ── CSV data paths ───────────────────────────────────────────────
-_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
-SEEDS_CSV  = os.path.join(_DATA_DIR, 'seeds.csv')
-PLANTS_CSV = os.path.join(_DATA_DIR, 'plants.csv')
+def _load_csv_rows(path: str) -> list[dict]:
+    try:
+        with open(path, encoding='utf-8') as file:
+            return list(csv.DictReader(file))
+    except FileNotFoundError:
+        return []
 
 
 def load_plants_csv() -> list[dict]:
-    """Return list of plant dicts from plants.csv (empty list if missing)."""
-    try:
-        with open(PLANTS_CSV) as f:
-            return list(csv.DictReader(f))
-    except FileNotFoundError:
-        return []
+    return _load_csv_rows(PLANTS_CSV)
 
 
 def load_seeds_csv() -> list[dict]:
-    """Return list of seed dicts from seeds.csv (empty list if missing)."""
-    try:
-        with open(SEEDS_CSV) as f:
-            return list(csv.DictReader(f))
-    except FileNotFoundError:
-        return []
-
-
-# ── Soil scan ────────────────────────────────────────────────────
-SOIL_SCAN_DWELL     = 2.0   # seconds to dwell at each sample point
-SOIL_SCAN_N_DEFAULT = 3     # default number of random sample points
-
-# ── Plant grid cell size (m) — individual plant slot ─────────────
-PLANT_CELL_SIZE = 1.0
-
-# ── Plant cell states (from plants.csv) ─────────────────────────
-PLANT_STATE_COLOURS = {
-    'not_planted': '#808080',
-    'detected':    '#FFD700',
-    # 'planted' → colour comes from batch
-}
-
-# ── Batch palette (deterministic: hash(batch_id) % len) ─────────
-BATCH_COLOURS = [
-    '#00CED1', '#FF6B35', '#7B68EE', '#32CD32',
-    '#FF69B4', '#20B2AA', '#FF4500', '#9370DB',
-    '#E91E63', '#00BCD4',
-]
-
-
-def get_batch_colour(batch_id: str) -> str:
-    return BATCH_COLOURS[hash(batch_id) % len(BATCH_COLOURS)]
-
-
-# ── CSV data paths ───────────────────────────────────────────────
-_DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
-SEEDS_CSV  = os.path.join(_DATA_DIR, 'seeds.csv')
-PLANTS_CSV = os.path.join(_DATA_DIR, 'plants.csv')
-
-
-def load_plants_csv() -> list[dict]:
-    """Return list of plant dicts from plants.csv (empty list if missing)."""
-    try:
-        with open(PLANTS_CSV) as f:
-            return list(csv.DictReader(f))
-    except FileNotFoundError:
-        return []
-
-
-def load_seeds_csv() -> list[dict]:
-    """Return list of seed dicts from seeds.csv (empty list if missing)."""
-    try:
-        with open(SEEDS_CSV) as f:
-            return list(csv.DictReader(f))
-    except FileNotFoundError:
-        return []
-
-
-# ── Soil scan ────────────────────────────────────────────────────
-SOIL_SCAN_DWELL    = 2.0   # seconds to dwell at each sample point
-SOIL_SCAN_N_DEFAULT = 3    # default number of random sample points
-
-# ── Plant grid cell size (m) — individual plant slot ─────────────
-PLANT_CELL_SIZE = 1.0
+    return _load_csv_rows(SEEDS_CSV)

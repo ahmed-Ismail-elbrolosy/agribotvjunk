@@ -18,18 +18,26 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-import rclpy
-from rclpy.node import Node
-from rclpy.action import ActionClient
-from rclpy.qos import qos_profile_sensor_data
+try:
+    import rclpy
+    from rclpy.node import Node
+    from rclpy.action import ActionClient
+    from rclpy.qos import qos_profile_sensor_data
 
-from geometry_msgs.msg import Twist, PoseStamped, TransformStamped
-from nav_msgs.msg import Odometry, Path
-from sensor_msgs.msg import Image, Range
-from std_msgs.msg import String
-from tf2_msgs.msg import TFMessage
-
-from nav2_msgs.action import NavigateToPose, FollowWaypoints
+    from geometry_msgs.msg import Twist, PoseStamped
+    from nav_msgs.msg import Odometry, Path
+    from sensor_msgs.msg import Image, Range
+    from std_msgs.msg import String
+    from nav2_msgs.action import NavigateToPose, FollowWaypoints
+    ROS_AVAILABLE = True
+except ImportError:  # standalone GUI mode without ROS 2 installed
+    rclpy = None
+    Node = object
+    ActionClient = None
+    qos_profile_sensor_data = None
+    Twist = PoseStamped = Odometry = Path = Image = Range = String = None
+    NavigateToPose = FollowWaypoints = None
+    ROS_AVAILABLE = False
 
 from .config import GRID_CONFIG, CELL_W, CELL_H
 
@@ -92,6 +100,8 @@ def grid_to_world(col: int, row: int) -> tuple[float, float]:
 # ─── ROS node (lives inside daemon thread) ──────────────────────────────
 class _ControllerNode(Node):
     def __init__(self, state: RobotState):
+        if not ROS_AVAILABLE:
+            raise RuntimeError('ROS 2 libraries are unavailable')
         super().__init__('agribot_gui_controller')
         self.st = state
 
@@ -254,6 +264,8 @@ class RosController:
 
     def __init__(self):
         self.state = RobotState()
+        self.state.nav_status = ('waiting for ROS topics' if ROS_AVAILABLE
+                                 else 'standalone mode (ROS unavailable)')
         self._node: _ControllerNode | None = None
         self._thread: threading.Thread | None = None
         self._running = False
@@ -275,33 +287,60 @@ class RosController:
             self._thread.join(timeout=3.0)
 
     def _spin(self):
-        if not rclpy.ok():
-            rclpy.init()
-        self._node = _ControllerNode(self.state)
-        while self._running and rclpy.ok():
-            rclpy.spin_once(self._node, timeout_sec=0.05)
-        self._node.destroy_node()
+        if not ROS_AVAILABLE:
+            self.state.nav_status = 'standalone mode (ROS unavailable)'
+            while self._running:
+                time.sleep(0.2)
+            return
+
+        try:
+            if not rclpy.ok():
+                rclpy.init()
+            self._node = _ControllerNode(self.state)
+            while self._running and rclpy.ok():
+                rclpy.spin_once(self._node, timeout_sec=0.05)
+        except Exception as exc:
+            self.state.nav_status = f'ROS offline: {exc}'
+        finally:
+            if self._node:
+                self._node.destroy_node()
+                self._node = None
 
     # ── public API (thread-safe — called from GUI) ───────────
     def send_vel(self, vx: float, wz: float):
         if self._node:
             self._node.send_vel(vx, wz)
+        else:
+            self.state.vx = float(vx)
+            self.state.wz = float(wz)
 
     def stop(self):
         if self._node:
             self._node.stop()
+        self.state.vx = 0.0
+        self.state.wz = 0.0
 
     def navigate_to(self, x: float, y: float, yaw: float = 0.0):
         if self._node:
             self._node.navigate_to(x, y, yaw)
+        else:
+            self.state.goal_x = float(x)
+            self.state.goal_y = float(y)
+            self.state.has_goal = True
+            self.state.nav_status = 'waiting for Nav2 / topics'
 
     def follow_waypoints(self, pts: list[tuple[float, float]]):
         if self._node:
             self._node.follow_waypoints(pts)
+        else:
+            self.state.nav_status = 'waiting for Nav2 / topics'
 
     def cancel_nav(self):
         if self._node:
             self._node.cancel_nav()
+        self.state.nav_active = False
+        self.state.has_goal = False
+        self.state.path = []
 
     # ── mission executors (called as asyncio tasks) ───────────────
     async def run_soil_scan(self, waypoints: list[tuple[float, float]],

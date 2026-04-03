@@ -749,9 +749,12 @@ def index():
 #  Entry-point
 # ═══════════════════════════════════════════════════════════════
 def main():
-    import rclpy
-    if not rclpy.ok():
-        rclpy.init()
+    try:
+        import rclpy
+        if not rclpy.ok():
+            rclpy.init()
+    except ImportError:
+        pass
     _ensure_singletons()
     ui.run(title='AgriBot v3', host='0.0.0.0', port=8080, reload=False, show=True)
 

@@ -3,6 +3,11 @@ full.launch.py — Everything for agribotv3
 
 Launches sim → Nav2 (delayed) → vision (venv) → GUI (venv)
 
+Profile behavior:
+  SIM profile is expected end-to-end:
+  /odom_gt -> EKF -> /odometry/filtered
+  Nav2 and GUI consume /odometry/filtered.
+
 The .venv lives at <agribotv3_src>/.venv and is created once with:
     cd src/agribotv3
     python3 -m venv --system-site-packages .venv
@@ -81,7 +86,7 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': use_sim_time}.items(),
     )
 
-    # ── Nav2 (delayed 12 s to let Gazebo + EKF settle) ───────
+    # ── Nav2 (delayed 12 s to let Gazebo + SIM-profile EKF settle) ──
     nav = TimerAction(
         period=12.0,
         actions=[

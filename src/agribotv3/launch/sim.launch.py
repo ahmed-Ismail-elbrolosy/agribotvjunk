@@ -1,12 +1,15 @@
 """
 sim.launch.py — Gazebo simulation layer for agribotv3
 
+Runtime profile used here: SIM
+  /odom_gt -> EKF -> /odometry/filtered
+
 Starts:
   • Gazebo Harmonic with the farm world
-  • ros_gz_bridge  (all gz.msgs.* topics)
+  • ros_gz_bridge  (simulation topics)
   • robot_state_publisher
-  • robot_localization EKF  (odom → base_link)
-  • static_map_tf            (map → odom)
+  • robot_localization EKF  (publishes odom -> base_link TF)
+  • static_map_tf            (map -> odom)
   • ultrasonic_converter
   • csv_costmap_node
 """
@@ -87,7 +90,8 @@ def generate_launch_description():
             '/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry',
             # Bridge dynamic_pose as TFMessage to a PRIVATE topic
             # (NOT /tf — that would conflict with RSP).
-            # ground_truth_odom node extracts model pose → /odom_gt.
+            # ground_truth_odom then converts this stream to /odom_gt
+            # used by EKF in the SIM profile.
             '/world/SinaiAgri/dynamic_pose/info@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
             '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
@@ -110,6 +114,8 @@ def generate_launch_description():
     )
 
     # ── EKF (robot_localization) ──────────────────────────────
+    # Uses SIM profile configured in config/ekf.yaml:
+    #   /odom_gt -> /odometry/filtered
     ekf = Node(
         package='robot_localization', executable='ekf_node',
         name='ekf_filter_node', output='screen',
@@ -140,7 +146,7 @@ def generate_launch_description():
         }],
     )
 
-    # ── Ground truth odom (Gazebo dynamic_pose → /odom_gt) ────
+    # ── Ground truth odom (Gazebo dynamic_pose -> /odom_gt) ───
     ground_truth = Node(
         package=pkg, executable='ground_truth_odom',
         name='ground_truth_odom', output='screen',

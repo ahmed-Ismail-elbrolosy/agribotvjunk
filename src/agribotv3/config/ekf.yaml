@@ -1,6 +1,9 @@
 # ──────────────────────────────────────────────
-# Single EKF – fuses wheel odometry + IMU
-# Publishes  odom → base_link  TF
+# Runtime profile: SIM (selected/default)
+#   /odom_gt -> EKF -> /odometry/filtered
+# EKF publishes odom -> base_link TF.
+# Future HW profile (not enabled here):
+#   /odometry + /imu -> EKF -> /odometry/filtered
 # ──────────────────────────────────────────────
 ekf_filter_node:
   ros__parameters:
@@ -21,8 +24,8 @@ ekf_filter_node:
     publish_tf: true
     publish_acceleration: false
 
-    # ── Ground-truth odometry (from ground_truth_odom node) ──
-    # Extracts model's world pose from Gazebo dynamic_pose
+    # SIM profile source: ground_truth_odom publishes /odom_gt
+    # from Gazebo dynamic poses.
     odom0: /odom_gt
     odom0_config: [true,  true,  false,
                    false, false, true,
@@ -34,9 +37,9 @@ ekf_filter_node:
     odom0_differential: false
     odom0_relative: false
 
-    # IMU disabled — it injects orientation drift that makes
-    # the EKF state diverge from the real Gazebo pose.
-    # Re-enable when running on real hardware with a calibrated IMU.
+    # SIM profile keeps IMU fusion disabled to avoid overriding
+    # ground-truth yaw in Gazebo.
+    # For future HW profile, enable imu0 and switch odom0 to wheel odometry.
     # imu0: /imu
     # imu0_config: [false, false, false,
     #               true,  true,  true,
